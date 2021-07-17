@@ -77,6 +77,8 @@ class ComparatorTest {
 		System.out.println("Sorted by rating");
 		RatingCompare ratingCompare = new RatingCompare();
 		Collections.sort(list, ratingCompare);
+		
+		
 		for (Movie movie : list)
 			System.out.println(movie.getRating() + " " + movie.getName() + " " + movie.getYear());
 		
