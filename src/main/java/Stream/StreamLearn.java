@@ -2,7 +2,39 @@ package Stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+class Movie {
+	int id;
+	String name;
+	Integer price;
+
+	public Movie(int id, String name, Integer price) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+
+}
+
 
 class Product {
 	int id;
@@ -41,28 +73,46 @@ public class StreamLearn {
 		productsList.add(new Product(3, "Lenevo Laptop", 28000f));
 		productsList.add(new Product(4, "Sony Laptop", 28000f));
 		productsList.add(new Product(5, "Apple Laptop", 90000f));
+		
 		List<Float> productPriceList2 = productsList.stream().filter(p -> p.price > 30000)// filtering data
 				.map(p -> p.price * 2) // fetching price
 				.collect(Collectors.toList()); // collecting as list
+		
+		
 
 		List<Product> filterdObj = productsList.stream().filter(p -> p.price > 30000)// filtering data
 				.collect(Collectors.toList()); // collecting as list
 
-		int hasCodePrice = productsList.stream().filter(p -> p.price > 30000).map(p -> p.price).hashCode();
-		System.out.println("hasCodePrice -->" + hasCodePrice);
+		//int hasCodePrice = productsList.stream().filter(p -> p.price > 30000).map(p -> p.price).hashCode();
+		//System.out.println("hasCodePrice -->" + hasCodePrice);
 		//System.out.println(productPriceList2);
 
 		// System.out.println("filterdObj -->" + filterdObj[0].get);
 
 		for (Product obj : filterdObj) {
-			//System.out.println("obj -->" + obj.getName());
+			System.out.println("obj -->" + obj.getName());
 		}
 		
 		List<Product> singleObj = productsList.stream().filter(p -> p.price > 30000)// filtering data
 				.collect(Collectors.toList()); // collecting as list
 		
-		System.out.println("singleObj -->" + singleObj);
 		
 		
+		
+		List<Movie> movieList = new ArrayList<Movie>();
+	
+		movieList.add(new Movie(1, "inception", 10));
+		movieList.add(new Movie(1, "iron man", 15));
+		movieList.add(new Movie(1, "thor", 20));
+		
+		
+		Predicate<Movie> noGreaterThan10 =  x -> x.getPrice() > 10;
+		
+		List<Movie> movieFilteredList = movieList.stream().filter(noGreaterThan10)// filtering data
+				.collect(Collectors.toList()); // collecting as list
+		
+		for( Movie movie : movieFilteredList) {
+				System.out.println(movie.getName()+ " ----- " + movie.getPrice());
+		}
 	}
 }
