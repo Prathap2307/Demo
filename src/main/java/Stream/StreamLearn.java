@@ -118,7 +118,7 @@ public class StreamLearn {
 			 * if(movie.getName().equalsIgnoreCase("thor")) {
 			 * movieFilteredList.remove(movie); }
 			 */
-			
+			 
 			/*
 			 * if(movie.getName() == "thor") { movieFilteredList.remove(movie); }
 			 */
