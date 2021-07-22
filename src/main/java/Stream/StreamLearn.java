@@ -99,13 +99,17 @@ public class StreamLearn {
 		movieList.add(new Movie(1, "inception", 10));
 		movieList.add(new Movie(1, "iron man", 15));
 		movieList.add(new Movie(1, "thor", 20));
+		movieList.add(new Movie(1, "Captain America", 20));
 
 		Predicate<Movie> noGreaterThan10 = x -> x.getPrice() > 10;
 
 		List<Movie> movieFilteredList = movieList.stream().filter(noGreaterThan10)// filtering data
 				.collect(Collectors.toList()); // collecting as list
 
+		
+		System.out.println("\n");
 		for (Movie movie : movieFilteredList) {
+		
 			System.out.println("before -->" + movie.getName() + " ----- " + movie.getPrice());
 		}
 
@@ -120,7 +124,7 @@ public class StreamLearn {
 			 */
 		//}
 		      
-		
+		// for iterator
 		for ( Iterator<Movie> iterator = movieFilteredList.iterator(); iterator.hasNext(); ) {
 			Movie movie = iterator.next();
 		    if (movie.getName() == "thor") {
@@ -128,9 +132,20 @@ public class StreamLearn {
 		    }
 		}
 		
+		// while iterator
+		Iterator<Movie> iterator = movieFilteredList.iterator();
+		while(iterator.hasNext()) {
+			
+			Movie movie = iterator.next();
+		    if (movie.getName() == "iron man") {
+		        iterator.remove();
+		    }
+			
+		}
+		
 		
 		for (Movie movie : movieFilteredList) {
-			System.out.println("after -->" + movie.getName() + " ----- " + movie.getPrice());
+			System.out.println("\n" + "after -->" + movie.getName() + " ----- " + movie.getPrice());
 		}
 		
 		
