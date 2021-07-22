@@ -119,7 +119,7 @@ public class StreamLearn {
 			 * if(movie.getName() == "thor") { movieFilteredList.remove(movie); }
 			 */
 		//}
-		   
+		      
 		
 		for ( Iterator<Movie> iterator = movieFilteredList.iterator(); iterator.hasNext(); ) {
 			Movie movie = iterator.next();
