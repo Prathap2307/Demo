@@ -125,20 +125,20 @@ public class StreamLearn {
 		//}
 		      
 		// for iterator
-		for ( Iterator<Movie> iterator = movieFilteredList.iterator(); iterator.hasNext(); ) {
-			Movie movie = iterator.next();
+		for ( Iterator<Movie> fList = movieFilteredList.iterator(); fList.hasNext(); ) {
+			Movie movie = fList.next();
 		    if (movie.getName() == "thor") {
-		        iterator.remove();
+		    	fList.remove();
 		    }
 		}
 		
 		// while iterator
-		Iterator<Movie> iterator = movieFilteredList.iterator();
-		while(iterator.hasNext()) {
+		Iterator<Movie> wList = movieFilteredList.iterator();
+		while(wList.hasNext()) {
 			
-			Movie movie = iterator.next();
+			Movie movie = wList.next();
 		    if (movie.getName() == "iron man") {
-		        iterator.remove();
+		    	wList.remove();
 		    }
 			
 		}

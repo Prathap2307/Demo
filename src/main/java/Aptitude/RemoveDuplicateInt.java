@@ -22,7 +22,7 @@ public class RemoveDuplicateInt {
 	}
 
 	public static void main(String[] args) {
-		int arr[] = { 10, 20, 20, 30, 30, 40, 50, 50, 20 };
+		int arr[] = { 10, 20, 50, 30, 30, 40, 50, 50, 20 };
 		int length = arr.length;
 		System.out.println("length -->" + length); //8
 		length = removeDuplicateElements(arr, length);

@@ -36,7 +36,7 @@ public class Removeduplicates {
     }
     public static void main(String[] args)
     {
-        int a[] = { 1, 1, 2, 2, 2, 1 };
+        int a[] = { 1, 5, 2, 2, 5, 1 };
         int n = a.length;
   
         n = removeduplicates(a, n);
