@@ -22,6 +22,8 @@ public class HashMapLearn {
 			System.out.println(e);
 			
 		}
+		
+		
 
 	}
 }
