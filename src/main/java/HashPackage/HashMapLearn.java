@@ -25,15 +25,6 @@ public class HashMapLearn {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 	}
 }
