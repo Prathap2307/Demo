@@ -16,6 +16,9 @@ public class HashMapLearn {
 		listOfMovie.forEach((k,v) -> System.out.println(k + " ------- " +  v));
 		
 		//for(Map.entry(String, String) e : listOfMovie)
+		System.out.println(listOfMovie.get("movieName8888"));
+		
+		
 		
 		for(Map.Entry<String, String> e : listOfMovie.entrySet()) {
 			

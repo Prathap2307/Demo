@@ -37,7 +37,7 @@ public class DropwhileLearn {
 	        
 	        List<Integer> filterdList = listOfNumber.stream().filter( e -> e > 5 ).collect(Collectors.toList());
             
-	     //   listOfNumber.stream().
+	       
 	        
 	        System.out.println(" dropWhileList --> ");
 	        for(Integer e : dropWhileList) {

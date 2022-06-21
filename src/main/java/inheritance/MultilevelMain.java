@@ -1,5 +1,10 @@
 package inheritance;
 
+import java.time.Instant;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
 public class MultilevelMain {
 	  public static void main(String[] args) 
 	    { 
@@ -12,8 +17,10 @@ public class MultilevelMain {
 	        B b = new B();
 	        SuperPower sp = new SuperPower();
 	        a.speedATest();
-	        b.speedTest();
-	        sp.speedTest();
+	        b.speedSuperTest();
+	        sp.speedSuperTest();
+	        
+     
 	    } 
 
 }

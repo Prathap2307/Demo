@@ -29,8 +29,8 @@ class three extends two {
 }
 
 class SuperPower {
-	public void speedTest() {
-		System.out.println("100");
+	public void speedSuperTest() {
+		System.out.println("SuperPower 500");
 	}
 
 }
@@ -44,6 +44,9 @@ class A  {
 class B extends SuperPower {
 	public void speedBTest() {
 		System.out.println("20");
+	}
+	public void speedSuperTest() {
+		System.out.println("99");
 	}
 }
 
