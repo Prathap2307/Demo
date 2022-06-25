@@ -39,7 +39,7 @@ public class DuplicateWord {
 		for(int i = 0; i  < words.length; i++) {
 			
 			for(int j = i+1; j < words.length; j++) {
-				
+				System.out.println("TEST -->" + words[i] +"-->" +  words[j]);
 				if(words[i].equalsIgnoreCase(words[j])) {
 					dublicateCount++;
 					if(dublicateCount > 1 && !duplicateElements.contains(words[i])) {
