@@ -5,6 +5,18 @@ import java.util.List;
 
 public class DuplicateWord {
 
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		String string = "Big black bug bit a big black dog on his big black nose";
 
@@ -32,6 +44,8 @@ public class DuplicateWord {
 		 */
 
 		String words[] = string.split(" ");
+		
+		String[] stringArrDuplicateElementsList =  new String[5];
 
 		List<String> duplicateElements = new ArrayList<>();
 		
@@ -39,11 +53,16 @@ public class DuplicateWord {
 		for(int i = 0; i  < words.length; i++) {
 			
 			for(int j = i+1; j < words.length; j++) {
-				System.out.println("TEST -->" + words[i] +"-->" +  words[j]);
+				
+				//System.out.println("TEST -->" + words[i] +"-->" +  words[j]);
+				
 				if(words[i].equalsIgnoreCase(words[j])) {
 					dublicateCount++;
 					if(dublicateCount > 1 && !duplicateElements.contains(words[i])) {
 						duplicateElements.add(words[i]);
+						
+						// ALTERNATE METHOD
+						//stringArrDuplicateElementsList[i] = words[i];
 					}
 					
 				}
@@ -55,7 +74,13 @@ public class DuplicateWord {
 		for(String s : duplicateElements) {
 			System.out.println(s);
 		}
-		 
+		
+		// ALTERNATE OUTPUT
+		/*
+		 * System.out.println("\n"); for(String s : stringArrDuplicateElementsList) {
+		 * 
+		 * System.out.println("stringArrDuplicateElementsList --> "+s); }
+		 */
 		
 	}
 
