@@ -17,7 +17,7 @@ class Singleton {
  
     // Static method
     // Static method to create instance of Singleton class
-    public static Singleton getInstance()
+    public static Singleton getInstanceOfTheClass()
     {
         if (single_instance == null)
             single_instance = new Singleton();
@@ -30,13 +30,13 @@ public class SingletonMain {
     public static void main(String args[])
     {
         // Instantiating Singleton class with variable x
-        Singleton x = Singleton.getInstance();
+        Singleton x = Singleton.getInstanceOfTheClass();
  
         // Instantiating Singleton class with variable y
-        Singleton y = Singleton.getInstance();
+        Singleton y = Singleton.getInstanceOfTheClass();
  
         // Instantiating Singleton class with variable z
-        Singleton z = Singleton.getInstance();
+        Singleton z = Singleton.getInstanceOfTheClass();
  
         // Printing the hash code for above variable as
         // declared
@@ -60,6 +60,8 @@ public class SingletonMain {
             System.out.println(
                 "Three objects DO NOT point to the same memory location on the heap");
         }
+        
+        //Singleton demoOne = new Singleton();
     }
 }
 
