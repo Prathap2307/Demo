@@ -20,7 +20,7 @@ class Employee {
 	}
 	public class EqualsExample {
 	   public static void main(String[] args) {
-	      Employee emp1 = new Employee("Jhon", 19);
+	      Employee emp1 = new Employee("Jhon", 15);
 	      Employee emp2 = new Employee("Jhon", 19);
 	      //Comparing the two objects
 	      boolean bool = emp1.equals(emp2);
